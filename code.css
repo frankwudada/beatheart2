@@ -1,0 +1,41 @@
+{margin:0;padding:0;box-sizing: border-box;}
+.heart{
+  margin: 100px;
+  position: relative;
+  display: inline-block;
+  animation: heart 600ms infinite alternate;
+}
+@keyframes heart{
+  0%{transform: scale(1.0)}
+  100%{transform: scale(1.2)}
+}
+.left{
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  position: absolute;
+  right: 100%;
+  bottom: 100%;
+  transform: rotate(45deg) translateX(28px);
+  /* rotate 与 translate 分开写会产生覆盖现象。 */
+  border-radius: 50% 0% 0% 50%;
+  background: red;
+}
+.right{
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  transform: rotate(45deg) translateY(28px);
+  border-radius: 50% 50% 0% 0%;
+  background: red;
+}
+.bottom{
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  transform: rotate(45deg);
+  background: red; 
+}
